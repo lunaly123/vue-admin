@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 // Element-UI
-import { Transfer, Button, Form, FormItem, Input, Checkbox, Message, MessageBox, Row, Col, Header, Dropdown, DropdownMenu, DropdownItem, Menu, MenuItem, Submenu, Main, Card, Tabs, TabPane, Select, Option, DatePicker, TimePicker, Switch, CheckboxGroup, Radio, RadioGroup, Upload, Table, TableColumn, Dialog, Pagination, Popover, Tag, Badge, ColorPicker } from 'element-ui'
+import { Transfer, Button, Form, FormItem, Input, Checkbox, Message, MessageBox, Row, Col, Header, Dropdown, DropdownMenu, DropdownItem, Menu, MenuItem, Submenu, Main, Card, Tabs, TabPane, Select, Option, DatePicker, TimePicker, Switch, CheckboxGroup, Radio, RadioGroup, Upload, Table, TableColumn, Dialog, Pagination, Popover, Tag, Badge, ColorPicker,Progress } from 'element-ui'
 
 import VueScroll from 'vuescroll'
 import Mock from './mock'
@@ -40,7 +40,7 @@ Vue.config.productionTip = false
 
 Vue.use(VueScroll, { ops: { bar: { background: '#C0C4CC' } } })
 
-const components = [Transfer, Button, Form, FormItem, Input, Checkbox, Message, MessageBox, Row, Col, Header, Dropdown, DropdownMenu, DropdownItem, Menu, MenuItem, Submenu, Main, Card, Tabs, TabPane, Select, Option, DatePicker, TimePicker, Switch, CheckboxGroup, Radio, RadioGroup, Upload, Table, TableColumn, Dialog, Pagination, Popover, Tag, Badge, ColorPicker]
+const components = [Transfer, Button, Form, FormItem, Input, Checkbox, Message, MessageBox, Row, Col, Header, Dropdown, DropdownMenu, DropdownItem, Menu, MenuItem, Submenu, Main, Card, Tabs, TabPane, Select, Option, DatePicker, TimePicker, Switch, CheckboxGroup, Radio, RadioGroup, Upload, Table, TableColumn, Dialog, Pagination, Popover, Tag, Badge, ColorPicker, Progress]
 
 components.forEach(item => {
   Vue.component(item.name, item)

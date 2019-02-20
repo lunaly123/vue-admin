@@ -1,10 +1,10 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 import Router from 'vue-router'
 import staticRouter from './staticRouter'
 import whiteList from './whiteList'
 import { requestUserInfo } from '@/api/user'
 
-Vue.use(Router)
+// Vue.use(Router)
 
 const router = new Router({
   routes: staticRouter

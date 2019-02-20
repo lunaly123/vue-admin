@@ -27,15 +27,20 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
-    publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+    publicPath:
+      process.env.NODE_ENV === 'production'
+        ? config.build.assetsPublicPath
+        : config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      '@': resolve('src'),
-    }
+      '@': resolve('src')
+    },
+    modules: [  
+      resolve('src'),
+      resolve('node_modules')
+    ],  
   },
   module: {
     rules: [
@@ -43,12 +48,19 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: vueLoaderConfig
+        options: vueLoaderConfig,
+        include: [resolve('src')],  // 添加配置
+        exclude: /node_modules\/(?!(autotrack|dom-utils))|vendor\.dll\.js/ // 添加配置
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+        loader: 'babel-loader?cacheDirectory=true',
+        include: [
+          resolve('src'),
+          resolve('test'),
+          resolve('node_modules/webpack-dev-server/client')
+        ],
+        exclude: /node_modules/ // 添加配置
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -87,5 +99,10 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
+  },
+  externals: {
+    'vue': 'Vue',
+    'vue-router': 'VueRouter',
+    'axios': 'axios',
   }
 }

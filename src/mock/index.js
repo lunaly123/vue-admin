@@ -24,7 +24,7 @@ export default {
       success: true,
       result: {
         id: '100001',
-        name: '林锦泽',
+        name: '姚雨青',
         roles: ['admin'],
         permissions: [
           {

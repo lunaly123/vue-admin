@@ -2,22 +2,29 @@
   <div>
     <el-card>
       <el-tabs v-model="activeName">
-        <el-tab-pane :label="$t('charts.line')" name="first" :lazy="true">
+        <el-tab-pane :label="$t('charts.line')"
+                     name="first"
+                     :lazy="true">
           <el-card shadow="hover">
-            <ve-line :data="chartData" :settings="chartSettings"></ve-line>
+            <ve-line :data="chartData"
+                     :settings="chartSettings"></ve-line>
           </el-card>
         </el-tab-pane>
-        <el-tab-pane :label="$t('charts.bar')" name="second" :lazy="true">
+        <el-tab-pane :label="$t('charts.bar')"
+                     name="second"
+                     :lazy="true">
           <el-card shadow="hover">
-            <ve-histogram :data="chartData2" :settings="chartSettings2"></ve-histogram>
+            <ve-histogram :data="chartData2"
+                          :settings="chartSettings2"></ve-histogram>
           </el-card>
         </el-tab-pane>
-        <el-tab-pane :label="$t('charts.gauge')" name="third" :lazy="true">
+        <el-tab-pane :label="$t('charts.gauge')"
+                     name="third"
+                     :lazy="true">
           <el-card shadow="hover">
-            <ve-gauge
-              :data="chartData3"
-              background-color="#000"
-              :settings="chartSettings3">
+            <ve-gauge :data="chartData3"
+                      background-color="#000"
+                      :settings="chartSettings3">
             </ve-gauge>
           </el-card>
         </el-tab-pane>
@@ -44,41 +51,41 @@ export default {
       chartData: {
         columns: ['日期', '访问用户', '下单用户', '下单率'],
         rows: [
-          {'日期': '1/1', '访问用户': 1393, '下单用户': 1093, '下单率': 0.32},
-          {'日期': '1/2', '访问用户': 3530, '下单用户': 3230, '下单率': 0.26},
-          {'日期': '1/3', '访问用户': 2923, '下单用户': 2623, '下单率': 0.76},
-          {'日期': '1/4', '访问用户': 1723, '下单用户': 1423, '下单率': 0.49},
-          {'日期': '1/5', '访问用户': 3792, '下单用户': 3492, '下单率': 0.323},
-          {'日期': '1/6', '访问用户': 4593, '下单用户': 4293, '下单率': 0.78}
+          { '日期': '1/1', '访问用户': 1393, '下单用户': 1093, '下单率': 0.32 },
+          { '日期': '1/2', '访问用户': 3530, '下单用户': 3230, '下单率': 0.26 },
+          { '日期': '1/3', '访问用户': 2923, '下单用户': 2623, '下单率': 0.76 },
+          { '日期': '1/4', '访问用户': 1723, '下单用户': 1423, '下单率': 0.49 },
+          { '日期': '1/5', '访问用户': 3792, '下单用户': 3492, '下单率': 0.323 },
+          { '日期': '1/6', '访问用户': 4593, '下单用户': 4293, '下单率': 0.78 }
         ]
       },
       chartSettings: {
-        axisSite: {right: ['下单率']},
+        axisSite: { right: ['下单率'] },
         yAxisType: ['KMB', 'percent'],
         yAxisName: ['数值', '比率']
       },
       chartData2: {
         columns: ['日期', '访问用户', '下单用户', '下单率'],
         rows: [
-          {'日期': '1/1', '访问用户': 1393, '下单用户': 1093, '下单率': 0.32},
-          {'日期': '1/2', '访问用户': 3530, '下单用户': 3230, '下单率': 0.26},
-          {'日期': '1/3', '访问用户': 2923, '下单用户': 2623, '下单率': 0.76},
-          {'日期': '1/4', '访问用户': 1723, '下单用户': 1423, '下单率': 0.49},
-          {'日期': '1/5', '访问用户': 3792, '下单用户': 3492, '下单率': 0.323},
-          {'日期': '1/6', '访问用户': 4593, '下单用户': 4293, '下单率': 0.78}
+          { '日期': '1/1', '访问用户': 1393, '下单用户': 1093, '下单率': 0.32 },
+          { '日期': '1/2', '访问用户': 3530, '下单用户': 3230, '下单率': 0.26 },
+          { '日期': '1/3', '访问用户': 2923, '下单用户': 2623, '下单率': 0.76 },
+          { '日期': '1/4', '访问用户': 1723, '下单用户': 1423, '下单率': 0.49 },
+          { '日期': '1/5', '访问用户': 3792, '下单用户': 3492, '下单率': 0.323 },
+          { '日期': '1/6', '访问用户': 4593, '下单用户': 4293, '下单率': 0.78 }
         ]
       },
       chartSettings2: {
-        axisSite: {right: ['下单率']},
+        axisSite: { right: ['下单率'] },
         yAxisType: ['KMB', 'percent'],
         yAxisName: ['数值', '比率']
       },
       chartData3: {
         columns: ['type', 'value'],
         rows: [
-          {type: '速度', value: 60},
-          {type: '转速', value: 80},
-          {type: '油表', value: 6000}
+          { type: '速度', value: 60 },
+          { type: '转速', value: 80 },
+          { type: '油表', value: 6000 }
         ]
       },
       chartSettings3: {
@@ -292,5 +299,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

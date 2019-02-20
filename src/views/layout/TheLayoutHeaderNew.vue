@@ -145,7 +145,7 @@ export default {
   .content {
     padding: 0 20px;
     .toggle {
-      font-size: 14px;
+      font-size: 28px;
       cursor: pointer;
     }
   }
